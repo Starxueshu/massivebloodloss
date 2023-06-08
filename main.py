@@ -26,7 +26,7 @@ if st.button("Submit"):
     # Get prediction
     prediction = rf_clf.predict_proba(x)[0, 1]
         # Output prediction
-    st.text(f"Probability of severe sleep disturbance: {'{:.2%}'.format(round(prediction, 5))}")
+    st.text(f"Predicted risk of intraoperative massive blood loss: {'{:.2%}'.format(round(prediction, 5))}")
     if prediction < 0.332:
         st.text(f"Risk group: low-risk group")
     else:
